@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleConsole.Controls
 {
-    public class Label
+    public class Label // this is the class for the Label Object -- this is a simple label that can be placed anywhere on the screen.
     {
         public string Caption
         { get { return Caption; }
