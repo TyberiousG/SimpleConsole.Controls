@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.cs" />
+    <Compile Include="Heading.cs" />
+    <Compile Include="Label.cs" />
+    <Compile Include="ProgressBar.cs" />
     <Compile Include="TextBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
