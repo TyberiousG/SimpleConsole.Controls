@@ -1,6 +1,6 @@
 # SimpleConsole.Controls
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TyberiousG/SimpleConsole.Controls/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![GitHub stars](https://img.shields.io/github/stars/TyberiousG/SimpleConsole.Controls.svg?style=social)](https://github.com/TyberiousG/SimpleConsole.Controls/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/TyberiousG/SimpleConsole.Controls.svg?style=social)](https://github.com/TyberiousG/SimpleConsole.Controls/network/members)
 
