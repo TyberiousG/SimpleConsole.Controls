@@ -30,10 +30,15 @@ namespace SimpleConsole.Controls
         public void SetFocus() 
         {
 
-            string retval = Value;
+            string retval = Value; // if a value property has already been assigned, it will be visible in the textbox when the textbox is focused.
             Console.ForegroundColor = ForegroundColor;
             Console.BackgroundColor = BackgroundColor;
             Console.SetCursorPosition(X, Y);
+            for (int i = 0; i < MaxLength; i++) // draw the textbox on the screen. ((this is done by writing the number of spaces equal to the MaxLength property to make sure that the color properties are printed prior to text being entered))
+            {
+                Console.Write(" ");
+            }
+            Console.SetCursorPosition(X, Y); // reset the cursor position to the beginning of the textbox.
             Console.Write(Value); // if this textbox has already been constructed, then the value of the textbox will be written to the screen.
             HasFocus = true;
             Console.SetCursorPosition(X + Value.Length, Y);
@@ -54,20 +59,20 @@ namespace SimpleConsole.Controls
                         Console.Write("\b \b");
                     }
                 }
-                else
+                else // if the user presses any other key, then the character will be added to the textbox.
                 {
-                    if ((retval.Length < MaxLength) && (Capture.Key != ConsoleKey.Backspace) && (Capture.Key != ConsoleKey.Enter))
+                    if ((retval.Length < MaxLength) && (Capture.Key != ConsoleKey.Backspace) && (Capture.Key != ConsoleKey.Enter)) // if the textbox is not full, then the character will be added to the textbox.
                     {
                         retval += Capture.KeyChar;
-                        if(IsPassword)
+                        if(IsPassword) // if the textbox is a password box, then the input will be masked with "*" characters.
                             Console.Write("*");
-                        else
+                        else // if the textbox is not a password box, then the input will be displayed normally.
                         Console.Write(Capture.KeyChar);
                     }
                 }
             }
             Value = retval; // finalize the value of the textbox and commit it to the Value property.
-            HasFocus = false;
+            HasFocus = false; // set the HasFocus property to false.
         }
 
     }
