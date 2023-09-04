@@ -33,6 +33,7 @@ namespace SimpleConsole.Controls
         }
         public void SetFocus()
         {
+            Draw();
             Console.SetCursorPosition(X + 1, Y);
             char key = Console.ReadKey(true).KeyChar;
             if (key == ' ')

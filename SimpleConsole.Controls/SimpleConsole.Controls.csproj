@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checkbox.cs" />
+    <Compile Include="Clock.cs" />
+    <Compile Include="Combobox.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Heading.cs" />
     <Compile Include="Label.cs" />

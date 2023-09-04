@@ -2,15 +2,15 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>1.0.1</version>
+    <version>1.2.0</version>
     <title>SimpleConsole.Controls</title>
     <authors>TyberiouG</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <license type="expression">MIT</license>
+    <license type="expression">GPL-3.0-or-later</license>
     <!-- <icon>icon.png</icon> -->
     <projectUrl>https://github.com/TyberiousG/SimpleConsole.Controls</projectUrl>
     <description>SimpleConsole.Controls is a C# class library designed to make console application development easier for .NET developers. With SimpleConsole.Controls, you can create console equivalents of common WinForms objects, allowing you to build interactive and user-friendly console applications effortlessly.</description>
-    <releaseNotes>Version 1.0.1.0 Release</releaseNotes>
+    <releaseNotes>Added Classes: Clock, Checkbox, Combobox</releaseNotes>
     <copyright>Creative Commons</copyright>
     <tags>dotnet console console-application dotnet-console</tags>
   </metadata>
