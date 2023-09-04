@@ -12,22 +12,25 @@ namespace SimpleConsole.Controls
         public ConsoleColor BackgroundColor { get; set; }
         public bool HasFocus { get; set; } // defines whether or not the textbox has focus. ((is actively being typed into))
         public bool IsPassword { get; set; } // defines whether or not the textbox is a password box. ((if true, the input will be masked with "*" characters.))
-        public TextBox() // default constructor.
+        public bool CatchUpDown { get; set; } // defines whether or not the textbox will catch the up and down arrow keys. ((if true, the up and down arrow keys will be caught and will not be passed to the window.))
+        public TextBox() // default constructor
         {
-            Value = "";
+            Value = ""; // value at instantiation is empty.
             X = 0;
             Y = 0;
             MaxLength = 0;
             IsPassword = false;
             ForegroundColor = ConsoleColor.White;
             BackgroundColor = ConsoleColor.Black;
+            CatchUpDown = true;
             HasFocus = true;
+
         }
         public override string ToString() // override the ToString() method to return the value of the textbox. ((this is useful for debugging purposes, but at runtime the Textbox.Value property should be used instead.))
         {
             return Value;
         }
-        public void SetFocus() 
+        public void SetFocus()
         {
 
             string retval = Value; // if a value property has already been assigned, it will be visible in the textbox when the textbox is focused.
@@ -64,10 +67,10 @@ namespace SimpleConsole.Controls
                     if ((retval.Length < MaxLength) && (Capture.Key != ConsoleKey.Backspace) && (Capture.Key != ConsoleKey.Enter)) // if the textbox is not full, then the character will be added to the textbox.
                     {
                         retval += Capture.KeyChar;
-                        if(IsPassword) // if the textbox is a password box, then the input will be masked with "*" characters.
+                        if (IsPassword) // if the textbox is a password box, then the input will be masked with "*" characters.
                             Console.Write("*");
                         else // if the textbox is not a password box, then the input will be displayed normally.
-                        Console.Write(Capture.KeyChar);
+                            Console.Write(Capture.KeyChar);
                     }
                 }
             }

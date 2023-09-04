@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleConsole.Controls
 {
     public class Label // this is the class for the Label Object -- this is a simple label that can be placed anywhere on the screen.
     {
         public string Caption
-        { get { return Caption; }
+        {
+            get { return Caption; }
             set
             {
                 Caption = value;

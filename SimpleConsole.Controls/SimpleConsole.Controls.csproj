@@ -48,6 +48,7 @@
     <Compile Include="Heading.cs" />
     <Compile Include="Label.cs" />
     <Compile Include="ProgressBar.cs" />
+    <Compile Include="Rectangle.cs" />
     <Compile Include="TextBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
