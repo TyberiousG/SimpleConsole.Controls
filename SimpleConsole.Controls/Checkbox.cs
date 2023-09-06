@@ -33,23 +33,30 @@ namespace SimpleConsole.Controls
         }
         public void SetFocus()
         {
-            Draw();
-            Console.SetCursorPosition(X + 1, Y);
-            char key = Console.ReadKey(true).KeyChar;
-            if (key == ' ')
+            while (true) //
             {
-
-                if (Checked) // changing from checked to unchecked status
-                {
-                    Checked = false;
-                    Console.Write(UncheckedCharacter);
-                }
-                else        // changing from unchecked to checked status
-                {
-                    Checked = true;
-                    Console.Write(CheckedCharacter);
-                }
+                Draw();
                 Console.SetCursorPosition(X + 1, Y);
+                char key = Console.ReadKey(true).KeyChar;
+                if (key == ' ')
+                {
+
+                    if (Checked) // changing from checked to unchecked status
+                    {
+                        Checked = false;
+                        Console.Write(UncheckedCharacter);
+                    }
+                    else        // changing from unchecked to checked status
+                    {
+                        Checked = true;
+                        Console.Write(CheckedCharacter);
+                    }
+                    Console.SetCursorPosition(X + 1, Y);
+                }
+                else if (key == '\r')
+                {
+                    break;
+                }
             }
         }
         public void Draw()
